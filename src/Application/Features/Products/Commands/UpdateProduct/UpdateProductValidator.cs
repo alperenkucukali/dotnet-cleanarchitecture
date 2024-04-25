@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Products.Commands.CreateProduct
+namespace Application.Features.Products.Commands.UpdateProduct
 {
-    public class CreateProductValidator : AbstractValidator<CreateProductCommand>
+    public class UpdateProductValidator : AbstractValidator<UpdateProductCommand>
     {
-        public CreateProductValidator()
+        public UpdateProductValidator()
         {
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage(ProductMessage.NameRequired)

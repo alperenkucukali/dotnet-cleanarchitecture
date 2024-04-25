@@ -16,6 +16,7 @@ namespace Infrastructure.Data.Configurations
             builder.Property(t => t.Id).UseIdentityColumn().ValueGeneratedOnAdd();
             builder.Property(t => t.Name).IsRequired().HasMaxLength(128);
             builder.Property(t=> t.Description).IsRequired().HasMaxLength(512);
+            builder.Property(t=> t.ImageUrl).IsRequired().HasMaxLength(1028);
             builder.Property(t => t.Created).IsRequired().ValueGeneratedOnAdd();
         }
     }

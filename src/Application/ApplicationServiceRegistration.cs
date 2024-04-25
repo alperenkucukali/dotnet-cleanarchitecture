@@ -1,4 +1,4 @@
-﻿using Application.Behaviours;
+﻿using Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;

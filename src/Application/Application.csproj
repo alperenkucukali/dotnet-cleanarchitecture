@@ -20,8 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Products\Commands\DeleteProduct\" />
     <Folder Include="Features\Products\Queries\GetProduct\" />
-    <Folder Include="Mappings\" />
+    <Folder Include="Common\Mappings\" />
   </ItemGroup>
 
 </Project>
