@@ -9,6 +9,11 @@ namespace Application.Features.Products.Queries.GetProduct
 {
     public class ProductQuery : IRequest<ProductDto>
     {
+        public ProductQuery(int id)
+        {
+            Id = id;
+        }
+
         public int Id { get; set; }
     }
 }
