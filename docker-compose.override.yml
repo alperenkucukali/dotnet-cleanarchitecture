@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  mssqldb:
+    container_name: mssqldb
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "@i8H#0=H<F29"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+  webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - "ConnectionStrings:DefaultConnectionString=Server=mssqldb;Database=LocalDb;User Id=sa;Password=@i8H#0=H<F29;TrustServerCertificate=True;"
+    restart: always
+    depends_on:
+      - mssqldb
+    ports:
+      - "8080"
+      - "8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro

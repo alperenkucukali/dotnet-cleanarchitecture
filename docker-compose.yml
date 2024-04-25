@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  mssqldb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: src/WebAPI/Dockerfile
