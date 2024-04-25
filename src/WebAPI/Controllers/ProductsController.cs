@@ -26,7 +26,7 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Update([FromBody] UpdateProductCommand command, [FromRoute] int id)
         {
             if (command.Id != id) return BadRequest();
@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> Delete([FromBody] DeleteProductCommand command, [FromRoute] int id)
         {
             if (command.Id != id) return BadRequest();
