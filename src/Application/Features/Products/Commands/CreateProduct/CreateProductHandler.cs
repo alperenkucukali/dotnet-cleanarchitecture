@@ -13,12 +13,10 @@ namespace Application.Features.Products.Commands.CreateProduct
     public class CreateProductHandler : IRequestHandler<CreateProductCommand, int>
     {
         private readonly IProductRepository _productRepository;
-        private readonly ILogger<CreateProductHandler> _logger;
 
-        public CreateProductHandler(IProductRepository productRepository, ILogger<CreateProductHandler> logger)
+        public CreateProductHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-            _logger = logger;
         }
 
         public async Task<int> Handle(CreateProductCommand request, CancellationToken cancellationToken)

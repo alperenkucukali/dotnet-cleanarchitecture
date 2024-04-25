@@ -13,12 +13,10 @@ namespace Application.Features.Products.Commands.UpdateProduct
     public class UpdateProductHandler : IRequestHandler<UpdateProductCommand>
     {
         private readonly IProductRepository _productRepository;
-        private readonly ILogger<UpdateProductHandler> _logger;
 
-        public UpdateProductHandler(IProductRepository productRepository, ILogger<UpdateProductHandler> logger)
+        public UpdateProductHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-            _logger = logger;
         }
 
         public async Task<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
