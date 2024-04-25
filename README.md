@@ -7,7 +7,7 @@ This project is a sample of ASP.NET Web API in .NET 8.
 ### Web API
 * ASP.NET Web API in .NET 8
 * **REST API** principles, **CRUD** operations
-* Implementing **CQRS, and Clean Architecture** using best practices
+* Implementing **CQRS, and Clean Architecture**
 * **Repository Pattern** implementation
 * Developing **CQRS using MediatR, FluentValidation, and AutoMapper** libraries
 * Using **Entity Framework Core ORM** and auto migrate to SQL Server when application run
@@ -15,7 +15,7 @@ This project is a sample of ASP.NET Web API in .NET 8.
 * **MSSQL database** connection and containerization
 
 ### Docker Compose establishment with all services on docker;
-- Containerization of worker
+- Containerization of api
 - Containerization of database
 - Override Environment variables
 
