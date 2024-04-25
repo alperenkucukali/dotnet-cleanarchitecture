@@ -22,8 +22,8 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> Create([FromBody] CreateProductCommand command)
         {
-            await _mediator.Send(command);
-            return NoContent();
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
         [HttpPut]
