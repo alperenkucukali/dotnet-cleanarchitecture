@@ -13,6 +13,7 @@ This project is a sample of ASP.NET Web API in .NET 8.
 * Using **Entity Framework Core ORM** and auto migrate to SQL Server when application run
 * **Swagger Open API** implementation
 * **MSSQL database** connection and containerization
+* Testing with **xUnit, FluentAssertions, Moq, Shouldly and Bogus** libraries
 
 ### Docker Compose establishment with all services on docker;
 - Containerization of api
