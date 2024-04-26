@@ -49,7 +49,7 @@ namespace WebAPI.Tests
             var command = new UpdateProductCommand()
             {
                 Id = 1,
-                Name = "qwe",
+                Name = "name",
                 Description = "description",
                 ImageUrl = "imageurl"
             };
